@@ -409,7 +409,8 @@
 - (UIPanGestureRecognizer *)panGesture {
     if (_panGesture) return _panGesture;
     
-    _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(detectPanGestureRecognizer:)];
+    _panGesture = [[DirectionPanGestureRecognizer alloc] initWithTarget:self action:@selector(detectPanGestureRecognizer:)];
+    _panGesture.direction = DirectionPanGestureRecognizerHorizontal;
     
     return _panGesture;
 }

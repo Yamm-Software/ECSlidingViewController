@@ -25,6 +25,8 @@
 #import <UIKit/UIKit.h>
 #import "ECSlidingConstants.h"
 
+#import "DirectionPanGestureRecognizer.h"
+
 @class ECSlidingViewController;
 
 /**
@@ -108,7 +110,7 @@
     CGFloat _anchorLeftRevealAmount;
     CGFloat _anchorRightPeekAmount;
     CGFloat _anchorRightRevealAmount;
-    UIPanGestureRecognizer *_panGesture;
+    DirectionPanGestureRecognizer *_panGesture;
     UITapGestureRecognizer *_resetTapGesture;
                                                            
     @protected
@@ -286,7 +288,7 @@
 /**
  The gesture that triggers the default interactive transition for a horizontal swipe. This is typically added to the top view or one of the top view's subviews.
  */
-@property (nonatomic, strong, readonly) UIPanGestureRecognizer *panGesture;
+@property (nonatomic, strong, readonly) DirectionPanGestureRecognizer *panGesture;
 
 /**
  The gesture that triggers the top view to reset. Useful for resetting the top view when in the anchored position.
